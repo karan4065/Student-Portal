@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Details</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      text-align: center;
+      max-width: 500px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .title {
+      font-size: 1.8rem;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      border: none;
+      padding: 10px;
+      border-radius: 15px;
+    }
+
+    .profile-picture {
+      width: 100%;
+      max-width: 350px;
+      height:350px;
+      border-radius: 10px;
+      object-fit: cover;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+      text-align: left;
+      margin-top: 20px;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #555;
+      margin: 5px 0;
+    }
+
+    .btns {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    a.back-button,
+    a.back-button1 {
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 10px 15px;
+      border-radius: 5px;
+      transition: all 0.3s;
+      cursor: pointer;
+      color: #ffffff;
+    }
+
+    button.back-button2 {
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 15px 15px;
+      border-radius: 5px;
+      transition: all 0.3s;
+      cursor: pointer;
+      color: #ffffff;
+      border: none;
+    }
+
+    a.back-button {
+      background-color: #756efa;
+       color: black;
+    }
+
+    a.back-button1 {
+      background-color: #81fa6e;
+      color: black;
+    }
+
+    button.back-button2 {
+      background-color: #fa6e6e;
+      color: black;
+    }
+
+    a.back-button:hover {
+      background-color: #2c25a8;
+      color: white;
+    }
+
+    a.back-button1:hover {
+      background-color:#3baa2a;
+      color: white;
+    }
+
+    button.back-button2:hover {
+      background-color: #ab2a2a;
+      color: white;
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+      .container {
+        padding: 15px;
+      }
+
+      .title {
+        font-size: 1.5rem;
+      }
+
+      .profile-picture {
+        max-width: 300px;
+      }
+
+      .btns {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      a.back-button,
+      a.back-button1,
+      button.back-button2 {
+        font-size: 0.9rem;
+        padding: 10px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .title {
+        font-size: 1.3rem;
+      }
+
+      .profile-picture {
+        max-width: 250px;
+      }
+
+      .btns {
+        gap: 10px;
+      }
+
+      a.back-button,
+      a.back-button1,
+      button.back-button2 {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title"><b>Student Details</b></h1>
+    <div class="card">
+      <img src="<%= user.profilePicture.startsWith('http') ? user.profilePicture : user.profilePicture.startsWith('/') ? user.profilePicture : '/uploads/' + user.profilePicture %>" alt="Profile Picture" class="profile-picture" />
+
+      <div class="card-body">
+        <h5 class="card-title"><%= user.name %></h5>
+        <p class="card-text"><strong>Email:</strong> <%= user.email %></p>
+        <p class="card-text"><strong>Roll No:</strong> <%= user.roll %></p>
+        <div class="btns">
+          <a href="/afterlogin" class="back-button">Back</a>
+          <a href="/updateUser/<%= user._id %>" class="back-button1">Update</a>
+          <form action="/deleteUser/<%= user._id %>?_method=DELETE" method="post" style="display: inline;">
+            <button class="back-button2" type="submit">Delete</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

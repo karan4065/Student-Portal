@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Student Portal</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      background: linear-gradient(to bottom, #e0eafc, #cfdef3);
+      color: #333;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* Header Styling */
+    header {
+      background-color: #5c37ac;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2rem;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Navigation Styling */
+    nav {
+      background: white;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    nav a {
+      color: #643eb7;
+      text-decoration: none;
+      font-size: 1.3rem;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      transition: all 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #545d8d;
+      color: white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Main Content Styling */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      width: 90%;
+      max-width: 1200px;
+      margin: 2rem auto;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-align: center;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      color:#5c37ac;
+    }
+
+    .card p {
+      padding: 0 1rem 1rem;
+      font-size: 1rem;
+      color: #555;
+    }
+
+    /* Footer Styling */
+    footer {
+      background:#5c37ac;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.6rem;
+      }
+
+      nav a {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+      }
+
+      .card h2 {
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header h1 {
+        font-size: 1.4rem;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+      }
+
+      nav a {
+        width: 90%;
+        text-align: center;
+      }
+
+      footer p {
+        font-size: 0.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Student Portal</h1>
+  </header>
+
+  <nav>
+    <a href="/about">About</a>
+    <a href="/login">Login</a>
+    <a href="/signup">Signup</a>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <img src="https://png.pngtree.com/thumb_back/fw800/background/20221214/pngtree-student-studyin-school-library-education-one-indoors-photo-image_42816954.jpg" alt="Student Resources">
+      <h2>Student Resources</h2>
+      <p>Access a wealth of resources, including e-books, guides, and tutorials, to help you excel in your academic journey.</p>
+    </div>
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/1445245272/photo/diversity-support-and-people-holding-hands-in-trust-and-unity-for-community-against-sky.jpg?s=612x612&w=0&k=20&c=wi9OAUatSVYFEAEyLT5k3RUX2LLVhF_olKWTwOoIHR0=" alt="Community Support">
+      <h2>Community Support</h2>
+      <p>Join a vibrant community of students and educators to share knowledge, ideas, and inspiration.</p>
+    </div>
+    <div class="card">
+      <img src="https://hashtagcounseling.in/wp-content/uploads/2023/07/Top-Techniques-to-Become-a-Career-Counsellor-1024x575-1.jpg" alt="Career Guidance">
+      <h2>Career Guidance</h2>
+      <p>Get personalized career advice, tips, and opportunities to prepare for your future.</p>
+    </div>
+    <div class="card">
+      <img src="https://media.istockphoto.com/id/687794544/photo/learn-something-new.jpg?s=612x612&w=0&k=20&c=23WkWQnZxdZddM70ZfGjk6sPe1y3zIMkTYieCeC_EEI=" alt="Class Schedules">
+      <h2>Class Schedules</h2>
+      <p>Stay on top of your schedule with an organized timetable, ensuring you never miss an important class or event.</p>
+    </div>
+    <div class="card">
+      <img src="https://www.aimlay.com/wp-content/uploads/2023/01/Skill-Development-Courses-in-India.webp" alt="Skill Development">
+      <h2>Skill Development</h2>
+      <p>Enroll in online workshops and courses to enhance your skills and prepare for the competitive world ahead.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDl8fGhvc3RlbHN8ZW58MHx8fHwxNjg3NTA3Mzgy&ixlib=rb-1.2.1&q=80&w=400" alt="Hostel Management">
+      <h2>Hostel Management</h2>
+      <p>Get all the details about hostel accommodations, rules, and facilities at your fingertips.</p>
+    </div>
+  </div>
+  
+
+  <footer>
+    <p>&copy; 2025 Student Portal. All rights reserved.</p>
+  </footer>
+</body>
+</html>

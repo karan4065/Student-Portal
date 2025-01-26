@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Student Portal</title>
+    <style>
+        /* Reset basic styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom, #f5f5f5, #e8eaf6);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header styling */
+        header {
+            background-color: #4a148c;
+            color: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        nav {
+            margin-top: 0.5rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-size: 1rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #fbc02d;
+        }
+
+        /* Container styling */
+        .container {
+            padding: 2rem;
+        }
+
+        /* Section styling */
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            color: #4a148c;
+            margin-bottom: 2rem;
+            animation: fadeIn 1.5s ease-in-out;
+            background: #ede7f6;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section {
+            display: flex;
+            align-items: flex-start;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Text content styling */
+        .text-content {
+            flex: 2;
+            padding: 15px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #424242;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        /* Image container styling */
+        .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer styling */
+        footer {
+            background-color: #4a148c;
+            color: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        footer a {
+            color: #fbc02d;
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                flex-direction: column;
+            }
+
+            .image-container {
+                margin-top: 1rem;
+                display: block;
+            }
+
+            .card {
+                font-size: 1rem;
+                padding: 1rem;
+            }
+
+            nav a {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>About Student Portal</h1>
+        <nav>
+            <a href="#overview">Overview</a>
+            <a href="#features">Features</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+
+        <h2 id="overview">Overview</h2>
+        <div class="section">
+            <div class="text-content">
+                <div class="card">
+                    The Student Portal is a modern platform designed to simplify and centralize access to essential tools,
+                    services, and information for students. It empowers students to manage personal details efficiently, track
+                    their academic activities, and stay informed with real-time updates and notifications. With an intuitive
+                    interface, the portal ensures a seamless experience, enabling students to navigate effortlessly through its
+                    features. By integrating all critical tools into a single platform, it eliminates the hassle of managing
+                    multiple systems. Whether it's customizing your dashboard, accessing secure academic resources, or staying
+                    updated with announcements, the Student Portal is designed to enhance productivity and convenience in daily
+                    student life.  
+                </div>
+            </div>
+            <div class="image-container">
+                <img
+                    src="https://media.istockphoto.com/id/1364358545/photo/web-page-browser-of-social-media-page-vr-interface-on-the-laptop-computer.jpg?s=612x612&w=0&k=20&c=T53je0Lr1HNGzMyJ6gq-0Tk5bMEoIERClyhSffcqIfo="
+                    alt="Overview Image">
+            </div>
+        </div>
+
+        <h2 id="features">Key Features</h2>
+        <div class="section">
+            <div class="text-content">
+                <div class="card">
+                    <strong>Secure Access:</strong> With advanced encryption, your personal data and academic records are safeguarded, ensuring privacy and protection.
+                </div>
+
+                <div class="card">
+                    <strong>Academic Progress Tracking:</strong> Easily monitor your course progress, grades, and upcoming deadlines to stay on top of your academic performance.
+                </div>
+
+                <div class="card">
+                    <strong>Resource Access:</strong> Quickly access study materials, assignments, and academic resources, all in one convenient place.
+                </div>
+            </div>
+
+            <div class="image-container">
+                <img
+                    src="https://www.kohezion.com/wp-content/uploads/2024/10/top-features-in-customer-inquiry-portals-1024x615.png"
+                    alt="Features Image">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 About Student Portal. All rights reserved.</p>
+        <a href="#top">Back to Top</a>
+    </footer>
+
+</body>
+
+</html>
